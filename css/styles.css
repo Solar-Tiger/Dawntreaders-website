@@ -1,5 +1,5 @@
 :root {
-  font-size: 1.125rem;
+  --dawntreader-primary: linear-gradient(to right, yellow, white);
 }
 
 /*  
@@ -10,6 +10,7 @@
 /*  
    Source: https://www.youtube.com/shorts/2lyDv0wOQuQ 
  */
+
 /* makes sizing simpler */
 *,
 *::before,
@@ -18,8 +19,6 @@
 }
 
 /* remove default spacing */
-/* force styling of type through styling, rather than elements */
-
 * {
   margin: 0;
   padding: 0;
@@ -30,11 +29,10 @@ html {
   color-scheme: dark light;
 }
 
-/* Disabling this for now */
 /* min body height */
-/* body {
-  min-height: 100vh;
-} */
+body {
+  font-size: 1.125rem;
+}
 
 /* responsive images/videos */
 img,
@@ -42,7 +40,7 @@ picture,
 svg,
 video {
   display: block;
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 button,
@@ -56,45 +54,99 @@ select {
  =========================================================================  
  */
 
+main,
+nav {
+  flex-grow: 1;
+}
+
+header,
+.header {
+  height: 4rem;
+}
+
+footer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+header,
+footer {
+  background: var(--dawntreader-primary);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  & > * {
+    padding: 0 20px;
+  }
 }
 
-.wrapper main {
-  margin-bottom: auto;
-}
-
-header {
-  height: 5rem;
-}
-
-footer {
-  height: 40px;
-}
-
-header,
-footer {
-  background: linear-gradient(to right, yellow, white);
-}
+/* .wrapper > * {
+  padding: 0 20px;
+} */
 
 .header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
+.header > :nth-child(1) {
+  align-self: flex-start;
+}
 .nav-links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  column-gap: 30px;
+  margin-right: 5rem;
   list-style-type: none;
+  & a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
 .main-info {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   gap: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.hero img {
+  /* width: clamp(150px, 40%, 500px); */
+  width: max(340px, 50%);
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+  }
 }
