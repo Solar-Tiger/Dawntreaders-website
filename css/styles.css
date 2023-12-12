@@ -124,13 +124,16 @@ footer {
 
 .hero {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 720px;
+  margin: 0 auto;
   margin-top: 10px;
 }
 
 .hero img {
-  width: clamp(150px, 40%, 500px);
-  /* width: max(720px, 50%); */
+  /* width: clamp(150px, 40%, 500px); */
+  width: max(720px, 40%);
 }
 
 .cards {
@@ -140,12 +143,6 @@ footer {
 
 .card {
   width: 400px;
-}
-
-@media screen and (max-width: 1200px) {
-  .hero {
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 768px) {
