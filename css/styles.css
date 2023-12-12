@@ -143,6 +143,10 @@ footer {
 
 .card {
   width: 400px;
+
+  & h2 {
+    background: var(--dawntreader-primary);
+  }
 }
 
 @media screen and (max-width: 768px) {
