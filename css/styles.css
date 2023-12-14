@@ -3,13 +3,12 @@
 }
 
 /*  
-   ========================================================================= 
-   =                         KEVIN POWELL CSS RESET                        =   
-   =========================================================================  
-*/
+  ========================================================================= 
+  =                         KEVIN POWELL CSS RESET                        =   
+  =========================================================================  
+  */
 
 /*  Source: https://www.youtube.com/shorts/2lyDv0wOQuQ */
-
 /* makes sizing simpler */
 *,
 *::before,
@@ -25,8 +24,8 @@
 
 /* dark mode user-agent-styles */
 /* html {
- color-scheme: dark light;
-  } */
+   color-scheme: dark light;
+ } */
 
 /* min body height */
 body {
@@ -41,16 +40,17 @@ video {
   display: block;
   max-width: 100%;
 }
+
 button,
 select {
   font-size: inherit;
 }
 
 /*  
-   ========================================================================= 
-   =                          BASIC STYLING BY ME                          =   
-   =========================================================================  
-*/
+  ========================================================================= 
+  =                          BASIC STYLING BY ME                          =   
+  =========================================================================  
+  */
 
 main,
 nav {
@@ -84,8 +84,8 @@ footer {
 }
 
 /* .wrapper > * {
- padding: 0 20px;
-  } */
+   padding: 0 20px;
+ } */
 
 .header {
   display: flex;
@@ -98,8 +98,8 @@ footer {
 }
 
 /* .header > .title {
- align-self: flex-start;
-  } */
+   align-self: flex-start;
+ } */
 
 .nav-links {
   display: flex;
@@ -154,10 +154,12 @@ footer {
   .wrapper h2 {
     text-align: center;
   }
+
   .header {
     flex-direction: column;
     margin-right: 0;
     gap: 0;
+
     & .title {
       align-self: center;
     }
@@ -178,12 +180,12 @@ footer {
     width: 100%;
   }
 }
-
 /*  
-   ========================================================================= 
-   =                             MEMBERS HTML                              =   
-   =========================================================================  
-*/
+  ========================================================================= 
+  =                             MEMBERS HTML                              =   
+  =========================================================================  
+  */
+
 .members-display {
   display: flex;
   flex-wrap: wrap;
@@ -199,7 +201,8 @@ footer {
 .member-portraits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-auto-rows: 175px;
+  grid-auto-rows: 200px;
+  column-gap: 20px;
   & img {
     border-radius: 50%;
     border: 2px solid black;
@@ -207,9 +210,9 @@ footer {
 }
 
 /* .member-portraits img {
- border-radius: 50%;
- border: 2px solid black;
-  } */
+   border-radius: 50%;
+   border: 2px solid black;
+ } */
 
 .portrait-container {
   display: flex;
@@ -220,11 +223,13 @@ footer {
 
 .member-image {
   margin: auto;
-  max-width: 40vw;
+  /* max-width: 40vw; */
+  max-width: min(600px, 40vw);
+
   /* & img {
-   max-width: 50%;
-   max-height: 50%;
- } */
+  max-width: 50%;
+  max-height: 50%;
+   } */
 }
 
 @media screen and (max-width: 1080px) {
@@ -241,11 +246,14 @@ footer {
   .member-portraits {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
+    gap: 20px;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .member-portrait-container {
     max-width: 40vw;
+    max-height: 600px;
+    overflow-y: auto;
   }
 }
