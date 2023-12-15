@@ -3,12 +3,13 @@
 }
 
 /*  
-  ========================================================================= 
-  =                         KEVIN POWELL CSS RESET                        =   
-  =========================================================================  
-  */
+ ========================================================================= 
+ =                         KEVIN POWELL CSS RESET                        =   
+ =========================================================================  
+ */
 
 /*  Source: https://www.youtube.com/shorts/2lyDv0wOQuQ */
+
 /* makes sizing simpler */
 *,
 *::before,
@@ -24,8 +25,8 @@
 
 /* dark mode user-agent-styles */
 /* html {
-   color-scheme: dark light;
- } */
+  color-scheme: dark light;
+   } */
 
 /* min body height */
 body {
@@ -47,10 +48,10 @@ select {
 }
 
 /*  
-  ========================================================================= 
-  =                          BASIC STYLING BY ME                          =   
-  =========================================================================  
-  */
+ ========================================================================= 
+ =                          BASIC STYLING BY ME                          =   
+ =========================================================================  
+ */
 
 main,
 nav {
@@ -84,8 +85,8 @@ footer {
 }
 
 /* .wrapper > * {
-   padding: 0 20px;
- } */
+  padding: 0 20px;
+   } */
 
 .header {
   display: flex;
@@ -98,8 +99,8 @@ footer {
 }
 
 /* .header > .title {
-   align-self: flex-start;
- } */
+  align-self: flex-start;
+   } */
 
 .nav-links {
   display: flex;
@@ -140,7 +141,8 @@ footer {
 
 .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .card {
@@ -159,7 +161,6 @@ footer {
     flex-direction: column;
     margin-right: 0;
     gap: 0;
-
     & .title {
       align-self: center;
     }
@@ -180,11 +181,12 @@ footer {
     width: 100%;
   }
 }
+
 /*  
-  ========================================================================= 
-  =                             MEMBERS HTML                              =   
-  =========================================================================  
-  */
+ ========================================================================= 
+ =                             MEMBERS HTML                              =   
+ =========================================================================  
+ */
 
 .members-display {
   display: flex;
@@ -210,9 +212,9 @@ footer {
 }
 
 /* .member-portraits img {
-   border-radius: 50%;
-   border: 2px solid black;
- } */
+  border-radius: 50%;
+  border: 2px solid black;
+   } */
 
 .portrait-container {
   display: flex;
@@ -225,11 +227,10 @@ footer {
   margin: auto;
   /* max-width: 40vw; */
   max-width: min(600px, 40vw);
-
   /* & img {
-  max-width: 50%;
-  max-height: 50%;
-   } */
+ max-width: 50%;
+ max-height: 50%;
+  } */
 }
 
 @media screen and (max-width: 1080px) {
@@ -253,7 +254,12 @@ footer {
 @media screen and (min-width: 1080px) {
   .member-portrait-container {
     max-width: 40vw;
-    max-height: 600px;
+    /* max-height: 600px; */
+    max-height: calc((4rem - 40px) + 100vh);
     overflow-y: auto;
   }
+}
+
+.member-portrait-container::-webkit-scrollbar {
+  display: none;
 }
