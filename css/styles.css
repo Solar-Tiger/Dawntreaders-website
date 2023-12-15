@@ -201,7 +201,7 @@ footer {
 
 .member-portrait-container {
   flex-grow: 1;
-  /* max-width: 40vw; */
+  padding-top: 1rem;
 }
 
 .member-portraits {
