@@ -1,5 +1,8 @@
 :root {
   --dawntreader-primary: linear-gradient(to right, yellow, white);
+  --header: 4rem;
+  --footer: 40px;
+  --main-body: calc(100vh - var(--header) - var(--footer));
 }
 
 /*  
@@ -60,11 +63,11 @@ nav {
 
 header,
 .header {
-  height: 4rem;
+  height: var(--header);
 }
 
 footer {
-  height: 40px;
+  height: var(--footer);
   display: flex;
   align-items: center;
 }
@@ -193,6 +196,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
+  flex: 1;
 }
 
 .member-portrait-container {
@@ -254,8 +258,7 @@ footer {
 @media screen and (min-width: 1080px) {
   .member-portrait-container {
     max-width: 40vw;
-    /* max-height: 600px; */
-    max-height: calc((4rem - 40px) + 100vh);
+    max-height: var(--main-body);
     overflow-y: auto;
   }
 }
