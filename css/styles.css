@@ -94,6 +94,7 @@ footer {
 
   & > .main-sidebar {
     padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -283,10 +284,39 @@ footer {
 }
 
 .events > aside {
-  grid-row: 1 / 3;
+  grid-row: 1 / 2;
   background-color: purple;
 }
 
 .sidebar {
   padding: 20px;
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow-y: auto;
+}
+
+article > .current-events {
+  margin: 20px;
+}
+
+article > img {
+  margin: 0 auto;
+  width: max(720px, 40%);
+}
+
+@media screen and (max-width: 768px) {
+  .events {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: var(--main-body);
+  }
+
+  aside {
+    display: none;
+  }
 }
