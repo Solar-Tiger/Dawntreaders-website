@@ -340,11 +340,14 @@ article > .current-events {
 
 .meetings-banner {
   width: 100%;
-  max-width: max(60vw, 768px);
-  height: 125px;
-  /* margin: 0 auto; */
+  max-width: 1280px;
+  height: 110px;
   margin-top: 20px;
   /* border: 2px solid black; */
   background: center no-repeat
     url(../fc-screenshots/2022/fc-events/fc-starlight-christmas.png);
+}
+
+.meetings-previous {
+  margin-top: auto;
 }
