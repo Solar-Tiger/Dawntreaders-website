@@ -276,6 +276,7 @@ footer {
  =                             EVENTS HTML                               =   
  =========================================================================  
  */
+
 .events {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -334,7 +335,7 @@ article > .current-events {
  =========================================================================  
  */
 
-.meetings-current {
+.meetings-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -352,5 +353,13 @@ article > .current-events {
 }
 
 .meetings-previous {
+  width: 100%;
+
+  & :nth-child(1) {
+    text-align: center;
+  }
+}
+
+.meetings-archive {
   margin-top: auto;
 }
