@@ -276,11 +276,9 @@ footer {
  =                             EVENTS HTML                               =   
  =========================================================================  
  */
-
 .events {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  height: var(--main-body);
 }
 
 .events > aside {
@@ -317,11 +315,16 @@ article > .current-events {
   .events {
     display: grid;
     grid-template-columns: 1fr;
-    height: var(--main-body);
   }
 
   aside {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .events {
+    height: var(--main-body);
   }
 }
 
