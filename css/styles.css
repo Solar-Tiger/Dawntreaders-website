@@ -160,11 +160,13 @@ footer {
 
 .card {
   width: 350px;
-  height: 300px;
+  max-height: max(50vw, 300px);
   border: 2px solid black;
 
   & h2 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--dawntreader-primary);
   }
 
