@@ -373,14 +373,31 @@ article > .current-events {
 .dawntreaders-about {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-}
+  gap: 3rem;
+  margin: 20px 0;
 
-.fc-house-hero {
-  margin: 0 20px;
+  & p {
+    max-width: 80ch;
+  }
+
+  & ul {
+    list-style-type: none;
+  }
 }
 
 .fc-house-hero > img {
   margin: 0 auto;
   width: max(720px, 40%);
+}
+
+@media screen and (max-width: 768px) {
+  .dawntreaders-about {
+    gap: 1rem;
+
+    & :is(p, h1) {
+      text-align: center;
+    }
+  }
 }
