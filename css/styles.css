@@ -1,5 +1,14 @@
 :root {
   --dawntreader-primary: linear-gradient(to right, yellow, white);
+  --dawntreader-pink: rgb(247, 178, 177);
+  --dawntreader-yellow: rgb(252, 247, 173);
+  --dawntreader-orange: rgb(251, 204, 73);
+  --dawntreader-red: rgb(207, 91, 65);
+  --dawntreader-dark-red: rgb(112, 38, 25);
+
+  --dawntreader-header: 'Chakra Petch', sans-serif;
+  --dawntreader-ff: 'Questrial', sans-serif;
+
   --header: 4rem;
   --footer: 40px;
   --main-body: calc(100vh - var(--header) - var(--footer));
