@@ -5,13 +5,16 @@
   --dawntreader-orange: rgb(251, 204, 73);
   --dawntreader-red: rgb(207, 91, 65);
   --dawntreader-dark-red: rgb(112, 38, 25);
+  --dawntreader-blue: rgb(123, 141, 243);
 
   --dawntreader-header: 'Chakra Petch', sans-serif;
   --dawntreader-ff: 'Questrial', sans-serif;
 
-  --header: 4rem;
-  --footer: 40px;
+  --header: 4.5rem;
+  --footer: 50px;
   --main-body: calc(100vh - var(--header) - var(--footer));
+
+  --join-round-corners: 10px;
 }
 
 /*  
@@ -42,11 +45,8 @@
 
 html {
   font-family: var(--dawntreader-header);
-}
-
-/* min body height */
-body {
-  font-size: 1.125rem;
+  line-height: 1.5;
+  font-size: 1.3rem;
 }
 
 /* responsive images/videos */
@@ -187,7 +187,6 @@ h2 {
 
 .main-info {
   --info-gap: 3rem;
-  --join-round-corners: 10px;
 
   display: flex;
   flex-direction: column;
@@ -217,7 +216,6 @@ h2 {
   & div {
     background-color: var(--dawntreader-pink);
     border-radius: var(--join-round-corners);
-
     padding: 2rem;
   }
 }
@@ -233,7 +231,6 @@ h2 {
 
 .card {
   --card-br: 20px;
-
   max-width: 350px;
   height: 350px;
   border: 2px solid black;
@@ -278,10 +275,6 @@ h2 {
   text-align: center;
 }
 
-.why-join__line-height div {
-  line-height: 2;
-}
-
 .join-icons {
   display: flex;
   justify-content: space-around;
@@ -296,7 +289,8 @@ h2 {
   max-width: max(250px, 13vw);
 }
 
-.join__round-corners {
+.join__round-corners,
+.event-content > article {
   border-radius: var(--join-round-corners);
 }
 
@@ -328,6 +322,7 @@ h2 {
 
   .card {
     width: 100%;
+    max-width: 720px;
   }
 
   .why-join {
@@ -340,7 +335,6 @@ h2 {
    =                             MEMBERS HTML                              =   
    =========================================================================  
    */
-
 .members-display {
   display: flex;
   flex-wrap: wrap;
@@ -359,7 +353,6 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-auto-rows: 200px;
   column-gap: 20px;
-
   & img {
     border-radius: 50%;
     border: 2px solid black;
@@ -441,7 +434,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2.5rem;
   list-style-type: none;
   width: 80%;
 
@@ -463,6 +456,11 @@ h2 {
   justify-content: space-between;
   gap: 2rem;
   overflow-y: auto;
+
+  & > article {
+    background-color: var(--dawntreader-pink);
+    margin: 20px;
+  }
 }
 
 article > .current-events {
