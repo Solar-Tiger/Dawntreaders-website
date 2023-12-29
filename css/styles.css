@@ -11,7 +11,7 @@
   --dawntreader-ff: 'Questrial', sans-serif;
 
   --header: 4.5rem;
-  --footer: 50px;
+  --footer: 40px;
   --main-body: calc(100vh - var(--header) - var(--footer));
 
   --join-round-corners: 10px;
@@ -46,7 +46,7 @@
 html {
   font-family: var(--dawntreader-header);
   line-height: 1.5;
-  font-size: 1.3rem;
+  font-size: 1.125rem;
 }
 
 /* responsive images/videos */
@@ -92,7 +92,6 @@ nav {
 }
 
 main {
-  height: var(--main-body);
   overflow-x: auto;
   background-color: black;
   position: relative;
@@ -339,7 +338,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: center;
   flex: 1;
 }
 
@@ -373,7 +371,7 @@ h2 {
 
 .member-image {
   margin: auto;
-  max-width: min(634px, 33vw);
+  max-width: min(600px, 44vw);
 }
 
 @media screen and (max-width: 1080px) {
@@ -504,6 +502,10 @@ article > .current-events {
   flex-direction: column;
   align-items: center;
   height: var(--main-body);
+
+  & :last-child {
+    justify-content: flex-end;
+  }
 }
 
 .meetings-banner {
@@ -566,8 +568,8 @@ article > .current-events {
   }
 }
 
-/* @media screen and (min-width: 768px) {
-  & :is(p, ul) {
-    max-width: 80ch;
+@media screen and (min-width: 768px) {
+  main {
+    height: var(--main-body);
   }
-} */
+}
